@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável - Nova Tebas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Menu de Acessibilidade Flutuante -->
+    <div class="acessibilidade-container" role="complementary" aria-label="Ferramentas de Acessibilidade">
+        <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
+        <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
+        <button id="btn-contraste" aria-label="Alternar modo escuro e claro">🌓</button>
+        <button id="btn-falar" aria-label="Ouvir texto da página">▶ Ouvir</button>
+        <button id="btn-parar" aria-label="Parar leitura de voz">⏹ Parar</button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Agro forte, futuro sustentável</h1>
+            <p class="hero-subtitle">Equilíbrio entre produção e meio ambiente em Nova Tebas</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main id="conteudo-principal">
+        
+        <!-- Seção de Introdução -->
+        <section class="intro-section">
+            <h2>O Agronegócio em Nova Tebas: Tradição, Sustentabilidade e Força Econômica</h2>
+            <p>O agronegócio é a principal força econômica de Nova Tebas, município localizado na região Central do Paraná. O setor destaca-se pela forte presença da agricultura familiar, que compõe cerca de 85% das propriedades rurais locais, gerando renda direta, movimentando o comércio e promovendo o desenvolvimento sustentável.</p>
+            <p>Bem-vindo à página dedicada ao coração econômico de Nova Tebas! Nossa terra é reconhecida pela riqueza de seu solo, pelo clima propício e, acima de tudo, pela dedicação do produtor rural. Com uma forte base na agricultura familiar, o município une tradição e inovação para alimentar famílias e impulsionar o desenvolvimento de toda a região.</p>
+        </section>
+
+        <!-- Espaço para Foto 1 -->
+        <div class="imagem"> 
+            <img src="Foto1.png" alt="Plantação sustentável em Nova Tebas mostrando o equilíbrio entre o campo e a natureza"> 
+        </div>
+
+        <!-- Seção de Pilares (Accordion) -->
+        <section class="pilares-section">
+            <h2>Pilares da Nossa Produção</h2>
+            <p class="section-desc">O ecossistema rural de Nova Tebas é diversificado e equilibrado, dividindo-se em importantes cadeias produtivas. Clique nos blocos abaixo para conhecer cada uma:</p>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Bovinocultura de Leite</span>
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Um dos maiores motores da economia familiar novatebense. Programas municipais de incentivo, como o Pró Leite, promovem o melhoramento genético e a assistência técnica, garantindo alta produtividade e qualidade do leite entregue aos laticínios da região.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Agricultura de Grãos</span>
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Grandes e médias extensões de terra dedicadas ao cultivo de culturas fortes no estado, como a soja e o milho, que abastecem o mercado nacional e as cooperativas parceiras.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Pecuária de Corte</span>
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Manejo estratégico de rebanhos bovinos, gerando carne de excelente qualidade por meio de pastagens bem aproveitadas.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Fruticultura e Olericultura Orgânica</span>
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Nova Tebas ganhou destaque regional com a agroindustrialização de frutas e polpas orgânicas, liderada por cooperativas locais (como a Cooperatvama no distrito de Poema). O modelo associa tecnologia sustentável, como o uso de energia solar e captação de água da chuva, gerando alto valor agregado.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Pequenas Agroindústrias</span>
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Diversificação que inclui a produção local de ovos comerciais, panificados e hortaliças certificados pelo Serviço de Inspeção Municipal (SIM), abrindo portas para novos mercados locais e regionais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Espaço para Foto 2 -->
+        <div class="imagem"> 
+            <img src="Foto2.png" alt="Produtor rural trabalhando com tecnologias de agricultura familiar em Nova Tebas"> 
+        </div>
+
+        <!-- Cards Informativos -->
+        <section class="cards-section">
+            <div class="card">
+                <h3>O Valor da Agricultura Familiar</h3>
+                <p>Cerca de 85% das propriedades rurais de Nova Tebas operam sob o regime familiar. Esse modelo não apenas fixa o homem no campo, mas também garante a segurança alimentar do município e fortalece cooperativas essenciais (como a Coopertebas). O incentivo à sucessão hereditária e ao cooperativismo faz com que as novas gerações continuem inovando no agronegócio local.</p>
+            </div>
+            <div class="card">
+                <h3>Inovação e Futuro no Campo</h3>
+                <p>Nova Tebas investe constantemente em parcerias com órgãos de extensão rural (como o IDR-Paraná e o Sebrae) para levar capacitação técnica ao campo. O foco do município está em alinhar a alta produtividade com as exigências do mercado moderno: respeito ao meio ambiente, transição energética e manejo inteligente do solo.</p>
+            </div>
+        </section>
+
+        <!-- Espaço para Foto 3 -->
+        <div class="imagem"> 
+            <img src="Foto3.png" alt="Sistemas de energia solar e captação de água em propriedade rural moderna"> 
+        </div>
+
+        <!-- Seção de Interação (Formulário e Comentários) -->
+        <section class="interacao-container">
+            <!-- Formulário de Inscrição -->
+            <div class="form-card">
+                <h3>Participe Conosco</h3>
+                <p>Venha conhecer melhor Nova Tebas. Inscreva-se no nosso seminário on-line sobre o Agro sustentável em nosso município.</p>
+                <form id="cadastro-form">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pais">País</label>
+                        <input type="text" id="pais" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Garantir Minha Vaga</button>
+                </form>
+            </div>
+
+            <!-- Área de Comentários -->
+            <div class="feedback-card">
+                <h3>Deixe seu Comentário</h3>
+                <p>Compartilhe suas ideias sobre a união entre a produção agrícola e a conservação ambiental.</p>
+                <form id="comentario-form">
+                    <div class="form-group">
+                        <label for="comentario-texto">Sua mensagem</label>
+                        <textarea id="comentario-texto" rows="6" placeholder="Escreva aqui o que você pensa..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Comentário</button>
+                </form>
+                <div id="lista-comentarios" aria-live="polite">
+                    <!-- Os comentários enviados vão aparecer aqui de forma dinâmica -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <p class="frase-efeito">AgroFuturo 2026 - Nova Tebas é a força do campo que alimenta o amanhã!</p>
