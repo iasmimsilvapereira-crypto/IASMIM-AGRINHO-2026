@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Alternar entre Modo Escuro e Modo Claro
-    document.getElementById("btn-tema").addEventListener("click", () => {
+    document.getElementById("btn-contrast").addEventListener("click", () => {
         document.body.classList.toggle("modo-escuro");
     });
 
