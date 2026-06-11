@@ -43,3 +43,25 @@ btnOuvir.addEventListener('click', () => {
 btnParar.addEventListener('click', () => {
     sinteseVoz.cancel();
 });
+// Seleciona todos os botões dos blocos expansíveis
+const botoesAcordeao = document.querySelectorAll('.acordeao-cabecalho');
+
+botoesAcordeao.forEach(botao => {
+    botao.addEventListener('click', () => {
+        // Pega o item do acordeão atual (o pai do botão)
+        const itemAtual = botao.parentElement;
+        
+        // Abre ou fecha o item atual alternando a classe 'ativo'
+        itemAtual.classList.toggle('ativo');
+        
+        // Verifica se o item está aberto ou fechado
+        const estaAberto = itemAtual.classList.contains('ativo');
+        
+        // Atualiza a acessibilidade (aria-expanded)
+        botao.setAttribute('aria-expanded', estaAberto);
+        
+        // Muda o ícone visual entre + e -
+        const icone = botao.querySelector('.icone-status');
+        icone.textContent = estaAberto ? '-' : '+';
+    });
+});
