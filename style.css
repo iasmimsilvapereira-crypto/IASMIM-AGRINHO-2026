@@ -387,3 +387,22 @@ body.dark-mode .form-card h3, body.dark-mode .feedback-card h3 {
 }
 
 .btn-submit {
+    /* Quando o modo escuro estiver ativo, o fundo fica escuro e as letras claras */
+body.modo-escuro {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Garante que os cards e seções também mudem de cor se necessário */
+body.modo-escuro .card, 
+body.modo-escuro .intro-section,
+body.modo-escuro .pilares-section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Ajuste a cor dos botões do acordeão no modo escuro */
+body.modo-escuro .acordeao-cabecalho {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
