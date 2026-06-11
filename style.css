@@ -406,3 +406,28 @@ body.modo-escuro .acordeao-cabecalho {
     background-color: #2a2a2a;
     color: #ffffff;
 }
+/* Esconde o conteúdo por padrão */
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Mostra o conteúdo quando o item estiver ativo */
+.acordeao-item.ativo .accordion-content {
+    display: block;
+}
+
+/* Estilo visual opcional para o botão */
+.acordeao-cabecalho {
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
