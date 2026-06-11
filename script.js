@@ -5,31 +5,32 @@ const btnContraste = document.getElementById('btn-contraste');
 const btnOuvir = document.getElementById('btn-ouvir');
 const btnParar = document.getElementById('btn-parar');
 
-// Variáveis de controle
-let tamanhoFonte = 100; 
+// VARIÁVEIS DE CONTROLE
+let tamanhoBaseRem = 1.0; // Começa com o valor base de 1rem do seu CSS
 const sinteseVoz = window.speechSynthesis;
 let leituraAtual = null;
 
-// 1. Aumentar fonte
+// 1. FUNÇÃO AUMENTAR FONTE
 btnAumentar.addEventListener('click', () => {
-    tamanhoFonte += 10;
-    document.body.style.fontSize = tamanhoFonte + '%';
+    tamanhoBaseRem += 0.1; // Sobe de 0.1 em 0.1rem
+    // Altera direto na raiz (HTML), fazendo com que todos os 'rem' da página aumentem juntos
+    document.documentElement.style.setProperty('--tamanho-base-fonte', tamanhoBaseRem + 'rem');
 });
 
-// 2. Diminuir fonte
+// 2. FUNÇÃO DIMINUIR FONTE
 btnDiminuir.addEventListener('click', () => {
-    if (tamanhoFonte > 70) { 
-        tamanhoFonte -= 10;
-        document.body.style.fontSize = tamanhoFonte + '%';
+    if (tamanhoBaseRem > 0.7) { // Limite mínimo para o texto não sumir
+        tamanhoBaseRem -= 0.1;
+        document.documentElement.style.setProperty('--tamanho-base-fonte', tamanhoBaseRem + 'rem');
     }
 });
 
-// 3. Modo claro e escuro
+// 3. FUNÇÃO MODO ESCURO (Alterado de 'modo-escuro' para 'dark-mode' para bater com seu CSS)
 btnContraste.addEventListener('click', () => {
-    document.body.classList.toggle('modo-escuro');
+    document.body.classList.toggle('dark-mode');
 });
 
-// 4. Ouvir texto da página
+// 4. FUNÇÃO OUVIR TEXTO
 btnOuvir.addEventListener('click', () => {
     sinteseVoz.cancel(); 
     const textoParaLer = document.getElementById('conteudo-principal').innerText;
@@ -38,7 +39,7 @@ btnOuvir.addEventListener('click', () => {
     sinteseVoz.speak(leituraAtual);
 });
 
-// 5. Parar leitura de voz
+// 5. FUNÇÃO PARAR LEITURA
 btnParar.addEventListener('click', () => {
     sinteseVoz.cancel();
 });
