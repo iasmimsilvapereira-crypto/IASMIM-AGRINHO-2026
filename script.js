@@ -5,45 +5,40 @@ const btnContraste = document.getElementById('btn-contraste');
 const btnOuvir = document.getElementById('btn-ouvir');
 const btnParar = document.getElementById('btn-parar');
 
-// VARIÁVEIS DE CONTROLE
-let tamanhoFonte = 100; // Começa em 100%
+// Variáveis de controle
+let tamanhoFonte = 100; 
 const sinteseVoz = window.speechSynthesis;
 let leituraAtual = null;
 
-// 1. FUNÇÃO AUMENTAR FONTE
+// 1. Aumentar fonte
 btnAumentar.addEventListener('click', () => {
     tamanhoFonte += 10;
     document.body.style.fontSize = tamanhoFonte + '%';
 });
 
-// 2. FUNÇÃO DIMINUIR FONTE
+// 2. Diminuir fonte
 btnDiminuir.addEventListener('click', () => {
-    if (tamanhoFonte > 70) { // Limite mínimo para não sumir o texto
+    if (tamanhoFonte > 70) { 
         tamanhoFonte -= 10;
         document.body.style.fontSize = tamanhoFonte + '%';
     }
 });
 
-// 3. FUNÇÃO MODO CLARO / ESCURO (CONTRASTE)
+// 3. Modo claro e escuro
 btnContraste.addEventListener('click', () => {
     document.body.classList.toggle('modo-escuro');
 });
 
-// 4. FUNÇÃO OUVIR TEXTO
+// 4. Ouvir texto da página
 btnOuvir.addEventListener('click', () => {
-    // Para qualquer leitura que já estiver rolando antes
     sinteseVoz.cancel(); 
-    
-    // Pega todo o texto do conteúdo principal
     const textoParaLer = document.getElementById('conteudo-principal').innerText;
-    
     leituraAtual = new SpeechSynthesisUtterance(textoParaLer);
-    leituraAtual.lang = 'pt-BR'; // Define o idioma para português
-    
+    leituraAtual.lang = 'pt-BR'; 
     sinteseVoz.speak(leituraAtual);
 });
 
-// 5. FUNÇÃO PARAR LEITURA
+// 5. Parar leitura de voz
 btnParar.addEventListener('click', () => {
     sinteseVoz.cancel();
 });
